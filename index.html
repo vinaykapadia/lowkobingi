@@ -77,11 +77,13 @@ const shuffleArray = array => {
 
 function generate()
 {
+  $("td").removeClass("token");
   shuffleArray(squares);
   for(i = 0; i < 24; i++) {
     var item = squares[i];
     $("#" + i).text(item);
   }
+  $("#free").addClass("token");
 }
 
 </script>
@@ -116,7 +118,7 @@ function generate()
 			<tr>
 				<td id="10"></th>
 				<td id="11"></th>
-				<td class="token">Free Space: Lowko is Awesome</th>
+				<td id="free">Free Space: Lowko is Awesome</th>
 				<td id="12"></th>
 				<td id="13"></th>
 			</tr>
